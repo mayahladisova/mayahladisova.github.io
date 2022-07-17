@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en-US" class="wf-ftnk-n4-active wf-ftnk-n5-active wf-ftnk-n7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="./art-alcove_files/e7fb1b89a0"></script><script src="./art-alcove_files/nr-1216.min.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="Maya Hladisova,Marie Hladisova,Design,Architecture,Hladisova">
+      <meta name="description" content="SPREADING THE REACHES OF CREATIVITY">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Maya Hladisova Design - ART ALCOVE">
+      <meta property="og:description" content="SPREADING THE REACHES OF CREATIVITY">
+      <meta property="og:image" content="./art-alcove_files/7077872c-ce50-47cf-b34c-fac4b7d09232_rwc_0x40x1779x1002x1779.jpg">
+        <link rel="icon" href="./icon.png">
+      <link rel="stylesheet" href="./art-alcove_files/main.css" type="text/css">
+      <link rel="stylesheet" href="./art-alcove_files/dbd3e979393d7e12186138bad0ae48b71657986989.css" type="text/css">
+    <link rel="canonical" href="./art-alcove.html">
+      <title>Maya Hladisova Design - ART ALCOVE</title>
+    <script type="text/javascript" src="./art-alcove_files/Tjme4zwPUX-57bTRFhY13FEO_AH16MTIS-edBsNH4NXfen3gfHYEBsJzwD9oFDIDWhm8FQBq5Q6ow2MkF2jkwRbh5QgywesqFR4RZAFKjR9UFQbhZcZqwcI-mkG0dW83da4XZcNC-Av0jhNlOfG0SY4zwKuh-AmaOcuoSeNkieZzde8zOcFzdPUlpWgzS1scdhUTdkoRdhXCSY4zwKuh-AmaOcuoSeNkieZzde8zOcFzdPJIZ1s0-kG4fJsm.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn(&#39;Typekit not loaded.&#39;);
+    }
+    "></script><style type="text/css">@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/9b05f3/000000000000000000013365/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:ftnk;src:url(https://use.typekit.net/af/309dfe/000000000000000000010091/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/309dfe/000000000000000000010091/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/309dfe/000000000000000000010091/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="./index.html">Architecture</a></div>
+                <div class="gallery-title"><a href="./design.html">Design</a></div>
+                <div class="gallery-title"><a href="./lighting.html">Lighting</a></div>
+      <div class="page-title">
+        <a href="./about.html">About</a>
+      </div>
+      <div class="page-title">
+        <a href="./contact.html">Contact</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header " data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="./index.html">Architecture</a></div>
+                <div class="gallery-title"><a href="./design.html">Design</a></div>
+                <div class="gallery-title"><a href="./lighting.html">Lighting</a></div>
+      <div class="page-title">
+        <a href="./about.html">About</a>
+      </div>
+      <div class="page-title">
+        <a href="./contact.html">Contact</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-image has-rollover  hoverable">
+    <a href="./index.html" class="image-normal image-link">
+      <img src="./art-alcove_files/9c22c8fd-7a1f-4d6f-9efd-ea465c8f66e1_rwc_0x0x287x99x4096.png" alt="Maya Hladisova">
+    </a>
+    <a href="./index.html" class="image-rollover image-link">
+      <img src="./art-alcove_files/a9ea6b77-297e-4ee1-9292-8c3f5f13ae33_rwc_0x0x287x99x4096.png" alt="Maya Hladisova">
+    </a>
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5ec74b5c09e24baafeb44c9311010af7b6b3e5799fb9749b80210" data-hover-hint="pageHeader" data-hover-hint-id="p5ec74b5c09e24baafeb44c9311010af7b6b3e5799fb9749b80210">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">ART ALCOVE</h1>
+            <p class="description">SPREADING THE REACHES OF CREATIVITY</p>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5ec74b5c09e24baafeb44c9311010af7b6b3e5799fb9749b80210">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 0px;
+padding-bottom: 100px;
+  width: 100%;
+  float: center;
+  clear: both;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/c8e252c1-538a-4889-a49a-98fe3b321fc6.jpg">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/c8e252c1-538a-4889-a49a-98fe3b321fc6_rw_1920.jpg" width="1779" >
+     </div>
+  
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree">
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 59">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 0px;
+padding-bottom: 100px;
+  width: 100%;
+  float: center;
+  clear: both;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/4f3aec73-9da2-4b77-bc8f-051ecfb4511d.jpg">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/4f3aec73-9da2-4b77-bc8f-051ecfb4511d_rw_1920.jpg" width="1500" >
+     </div>
+  
+
+    <div class="project-module module-caption-container js-caption-container align-left">
+      <div class="rich-text module-caption js-text-editable"><p>Collage created to show feel&nbsp;of project. I do not own any of the images</p></div>
+    </div>
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 41">
+        
+        
+        
+        
+        
+        <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 20px;
+padding-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  float: center;
+  clear: both;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:right;">There are about 2.5 million artists (including designers, architects, and musicians) in the United States workforce. These artisans are 3.6 times more likely to be self employed than other workers. However, it can be difficult for creative people to showcase their work and make a living off of it. This design provides a space for residents to teach classes as well as host artists’ markets where they can sell their work: enhancing their income and getting their name out. Art Alcove congregates creators of all types and allows them to not only exhibit their work, but also live in a community that fosters creativity and inspires innovation.</div></div>
+</div>
+
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree">
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 2">
+        
+        
+        
+        
+        
+        <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 20px;
+padding-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  float: center;
+  clear: both;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">Art Alcove is located in the “Golden Triangle District” in Denver, Colorado, a bustling metropolis rich in culture with a vibrant artistic presence. The “Golden Triangle” region specifically is a key hub filled with historic landmarks and art museums: the perfect location to further cultivate an artistic community.&nbsp;</div></div>
+</div>
+
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 3">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 0px;
+padding-bottom: 21px;
+  width: 100%;
+  float: center;
+  clear: both;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/92556dd9-71b1-4af7-b53e-94f028de8514.jpg">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/92556dd9-71b1-4af7-b53e-94f028de8514_rw_1920.jpg" width="1451" >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5ede7a8cce6296e501b20535486f1eb0f0e2e5219f3585d10836e" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="329.28505106778" style="width:329.28505106778px; flex-grow:329.28505106778;" data-width="1364" data-height="1077">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="./art-alcove_files/7afc5cc2-c242-4c60-84dc-8dc06f88ab5e_rw_1920.jpg" >
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="./art-alcove_files/7afc5cc2-c242-4c60-84dc-8dc06f88ab5e_rw_1920.jpg" sizes="548px" >
+      <span class="grid__item-filler" style="padding-bottom:78.958944281525%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="462.22222222222" style="width:462.22222222222px; flex-grow:462.22222222222;" data-width="1920" data-height="1080">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="./art-alcove_files/43a59b6a-c207-40ce-b8c0-d86e7550a22b_rw_1920.jpg" >
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="./art-alcove_files/43a59b6a-c207-40ce-b8c0-d86e7550a22b_rw_1920.jpg" sizes="769px" >
+      <span class="grid__item-filler" style="padding-bottom:56.25%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree">
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 1">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 0px;
+padding-bottom: 38px;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/75252acc-52e7-433f-86f4-8b75b36bb913.jpg">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/75252acc-52e7-433f-86f4-8b75b36bb913_rw_600.jpg" width="395" >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 1">
+        
+        
+        
+        
+        
+        <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 69px;
+padding-bottom: px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:right;">Art Alcove features ten ateliers with garage-like operable glazing allowing artists to bring their projects outdoors. On days when the community hosts an artists’ market, these propped open spaces create stalls for a convenient way to display and sell work.&nbsp;</div><div style="text-align:right;">The top of the studios is covered by a deck which encourages community interaction and guides visitors on market days. This deck alternates between pieces of wood and clear glazing; allowing light to filter through and be further diffused by the translucent atelier ceiling.&nbsp;</div></div>
+</div>
+
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree">
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 1">
+        
+        
+        
+        
+        
+        <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 8px;
+padding-bottom: px;
+  float: left;
+  clear: both;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">In the ateliers it is important to maintain stable, diffuse light, and avoid glare in order for creative task oriented work to take place. Top lighting is one of the most constant and reliable daylighting techniques which is why the studios rely on it.&nbsp;<br></div><div style="text-align:left;">The atelier which was examined had a Spatial Daylight Autonomy of 100% meaning 100% of the space is adequately lit (at least 300 lux) for at least 50% of the time. The average lux in this studio space was 779 which falls within the desired range of 300-3000 lux and provides a soft, ambient quality. The quantity and intensity of light is fairly consistent throughout the year which is perfect for an artist’s studio.</div></div>
+</div>
+
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 1">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: px;
+padding-bottom: 102px;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/1d13e036-ca77-487d-8bd4-3139775df785.jpg">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/1d13e036-ca77-487d-8bd4-3139775df785_rw_600.jpg" width="398" >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree">
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 1895000000">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 47px;
+padding-bottom: px;
+  width: 89%;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/d8f3cd3f-02f3-4928-819a-d936cc876392.png">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/d8f3cd3f-02f3-4928-819a-d936cc876392_rw_1920.png" width="1895" >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 1327303436">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: px;
+padding-bottom: px;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/fb2379b7-c63a-4c4b-999e-ae7b33f020a8.png">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/fb2379b7-c63a-4c4b-999e-ae7b33f020a8_rw_1920.png" width="1920" >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>A communal workspace with room for a kiln, some pottery wheels, a laser cutter, welding equipment, and a CNC machine is included among the ateliers. This space can be used for the artists to teach classes, further increasing their income sources.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree">
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 3">
+        
+        <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 0px;
+padding-bottom: 100px;
+  width: 100%;
+  float: center;
+  clear: both;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="./art-alcove_files/d6051c24-7a8a-41e1-8222-7d195c8e7613.jpg">
+           <img class="js-lazy e2e-site-project-module-image image-loaded" src="./art-alcove_files/d6051c24-7a8a-41e1-8222-7d195c8e7613_rw_1920.jpg" width="1774" >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 2">
+        
+        
+        
+        
+        
+        <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 20px;
+padding-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  float: center;
+  clear: both;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:right;">The six dwelling units are all about 700 sq feet, and are layered in a way that creates three levels of outdoor decks for the residents to enjoy. In order to preserve a sense of serenity for the working artists, and create an environment conducive to creativity, the units are placed to block sound and views from vehicular traffic. This oasis in the midst of the hectic city lends itself to productivity and maximizes artists potential. Out of the chaotic urban commotion rises Art Alcove: spreading the reaches of creativity.</div></div>
+</div>
+
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="https://mayahladisova.myportfolio.com/art-alcove#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="https://mayahladisova.myportfolio.com/art-alcove#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  Maya Hladisova 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":19,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5ec74b5c09e24baafeb44c9311010af7b6b3e5799fb9749b80210","theme":{"name":"marta\/ludwig"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false}};</script>
+  <script type="text/javascript" src="./art-alcove_files/translations"></script>
+  <script type="text/javascript" src="./art-alcove_files/main.js"></script><div class="js-lightbox-wrap extras-hidden offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking" style="background-color: rgb(255, 255, 255); opacity: 0.94;">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" fill="#000">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"><div data-slide-id="9" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden"><img src="./art-alcove_files/d6051c24-7a8a-41e1-8222-7d195c8e7613.jpg"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>
